@@ -1,0 +1,238 @@
+{
+  "updated_at": "2026-06-06T21:53:42.710003+00:00",
+  "agent_status": "idle",
+  "x402_calls": 84,
+  "contracts": {
+    "master_deploy": "42ae6d68ff2d522e17cfc7c564379999aca31979b30502f2c4fa8bdc71999b06",
+    "compliance_registry": "b694df7b251293bc6af60719d194dd747be0b9b5cb136c2230c5a034d7d83f4b",
+    "defi_gate": "b694df7b251293bc6af60719d194dd747be0b9b5cb136c2230c5a034d7d83f4b"
+  },
+  "assets": [
+    {
+      "id": "ASSET-BAD",
+      "name": "Unknown Bond XZ",
+      "type": "Bond",
+      "issuer": "Anon Issuer",
+      "value_usd": 500000,
+      "risk_score": 80,
+      "credit_score": 6,
+      "sanctions_clear": false,
+      "jurisdiction_eligible": false,
+      "consensus_reached": false,
+      "votes_for": 0,
+      "votes_against": 3,
+      "gate_decision": "REJECTED",
+      "deploy_hash": "83c597970d0b01e05b16a4425acec3eb3c43a65a2261816014e35751ee9765a8"
+    },
+    {
+      "id": "ASSET-GOOD",
+      "name": "TechCorp Invoice 2026-A",
+      "type": "Invoice",
+      "issuer": "TechCorp Ltd",
+      "value_usd": 250000,
+      "risk_score": 6,
+      "credit_score": 29,
+      "sanctions_clear": true,
+      "jurisdiction_eligible": true,
+      "consensus_reached": true,
+      "votes_for": 3,
+      "votes_against": 0,
+      "gate_decision": "ACCEPTED",
+      "deploy_hash": "bc4add56928730556e6e06c1425035cc2256c06dc9132ca2b3e4475a3ae8ab16"
+    },
+    {
+      "id": "ASSET-MID",
+      "name": "Property Token Berlin-7",
+      "type": "Real Estate",
+      "issuer": "PropFund GmbH",
+      "value_usd": 1200000,
+      "risk_score": 16,
+      "credit_score": 18,
+      "sanctions_clear": true,
+      "jurisdiction_eligible": true,
+      "consensus_reached": true,
+      "votes_for": 2,
+      "votes_against": 1,
+      "gate_decision": "ACCEPTED",
+      "deploy_hash": "9db589bfd8fd561dfb2edfdce54f8b5001bd9f42e400b0bd85ae0b10cd8dbe26"
+    }
+  ],
+  "feed": [
+    {
+      "time": "17:53:37",
+      "message": "CASPER TX: attestation 83c59797\u2026 posted successfully"
+    },
+    {
+      "time": "17:53:37",
+      "message": "DeFi Gate: ASSET-BAD REJECTED"
+    },
+    {
+      "time": "17:53:16",
+      "message": "Processing Unknown Bond XZ (ASSET-BAD)"
+    },
+    {
+      "time": "17:53:11",
+      "message": "CASPER TX: attestation 9db589bf\u2026 posted successfully"
+    },
+    {
+      "time": "17:53:11",
+      "message": "DeFi Gate: ASSET-MID ACCEPTED"
+    },
+    {
+      "time": "17:52:51",
+      "message": "Processing Property Token Berlin-7 (ASSET-MID)"
+    },
+    {
+      "time": "17:52:46",
+      "message": "CASPER TX: attestation bc4add56\u2026 posted successfully"
+    },
+    {
+      "time": "17:52:46",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED"
+    },
+    {
+      "time": "17:52:30",
+      "message": "Processing TechCorp Invoice 2026-A (ASSET-GOOD)"
+    },
+    {
+      "time": "17:45:28",
+      "message": "CASPER TX: attestation e7742794\u2026 posted successfully"
+    },
+    {
+      "time": "17:45:28",
+      "message": "DeFi Gate: ASSET-BAD REJECTED"
+    },
+    {
+      "time": "17:45:09",
+      "message": "Processing Unknown Bond XZ (ASSET-BAD)"
+    },
+    {
+      "time": "17:45:04",
+      "message": "CASPER TX: attestation b80c1e82\u2026 posted successfully"
+    },
+    {
+      "time": "17:45:04",
+      "message": "DeFi Gate: ASSET-MID ACCEPTED"
+    },
+    {
+      "time": "17:44:45",
+      "message": "Processing Property Token Berlin-7 (ASSET-MID)"
+    },
+    {
+      "time": "17:44:40",
+      "message": "CASPER TX: attestation 06772027\u2026 posted successfully"
+    },
+    {
+      "time": "17:44:40",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED"
+    },
+    {
+      "time": "17:44:23",
+      "message": "Processing TechCorp Invoice 2026-A (ASSET-GOOD)"
+    },
+    {
+      "time": "17:26:15",
+      "message": "CASPER TX: attestation f8de2058\u2026 posted successfully"
+    },
+    {
+      "time": "17:26:15",
+      "message": "DeFi Gate: ASSET-BAD REJECTED"
+    },
+    {
+      "time": "17:26:02",
+      "message": "Processing Unknown Bond XZ (ASSET-BAD)"
+    },
+    {
+      "time": "17:25:57",
+      "message": "CASPER TX: attestation caa1c88c\u2026 posted successfully"
+    },
+    {
+      "time": "17:25:57",
+      "message": "DeFi Gate: ASSET-MID ACCEPTED"
+    },
+    {
+      "time": "17:25:44",
+      "message": "Processing Property Token Berlin-7 (ASSET-MID)"
+    },
+    {
+      "time": "17:25:39",
+      "message": "CASPER TX: attestation c6d67308\u2026 posted successfully"
+    },
+    {
+      "time": "17:25:39",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED"
+    },
+    {
+      "time": "17:25:26",
+      "message": "Processing TechCorp Invoice 2026-A (ASSET-GOOD)"
+    },
+    {
+      "time": "17:19:59",
+      "message": "CASPER TX: attestation 34227d11\u2026 posted successfully"
+    },
+    {
+      "time": "17:19:59",
+      "message": "DeFi Gate: ASSET-BAD REJECTED"
+    },
+    {
+      "time": "17:19:47",
+      "message": "Processing Unknown Bond XZ (ASSET-BAD)"
+    },
+    {
+      "time": "17:19:41",
+      "message": "CASPER TX: attestation 71d9eafb\u2026 posted successfully"
+    },
+    {
+      "time": "17:19:41",
+      "message": "DeFi Gate: ASSET-MID ACCEPTED"
+    },
+    {
+      "time": "17:19:18",
+      "message": "Processing Property Token Berlin-7 (ASSET-MID)"
+    },
+    {
+      "time": "17:19:13",
+      "message": "CASPER TX: attestation 7d99c807\u2026 posted successfully"
+    },
+    {
+      "time": "17:19:13",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED"
+    },
+    {
+      "time": "17:18:52",
+      "message": "Processing TechCorp Invoice 2026-A (ASSET-GOOD)"
+    },
+    {
+      "time": "19:28:01",
+      "message": "RiskAgent: ASSET-GOOD cleared \u2014 risk score 6/100"
+    },
+    {
+      "time": "19:28:02",
+      "message": "ComplianceAgent: OFAC check passed for ASSET-GOOD"
+    },
+    {
+      "time": "19:28:03",
+      "message": "TreasuryAgent: credit score 88 (AAA)"
+    },
+    {
+      "time": "19:28:15",
+      "message": "CASPER TX: attestation ba9c9aee\u2026 posted successfully"
+    },
+    {
+      "time": "19:28:16",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED as collateral"
+    },
+    {
+      "time": "19:29:40",
+      "message": "ComplianceAgent: sanctions flag on ASSET-BAD"
+    },
+    {
+      "time": "19:29:55",
+      "message": "CASPER TX: attestation 133be872\u2026 posted successfully"
+    },
+    {
+      "time": "19:29:56",
+      "message": "DeFi Gate: ASSET-BAD REJECTED \u2014 no consensus"
+    }
+  ]
+}

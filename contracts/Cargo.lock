@@ -149,6 +149,7 @@ name = "casperguard"
 version = "0.1.0"
 dependencies = [
  "odra",
+ "odra-build",
 ]
 
 [[package]]
@@ -595,6 +596,16 @@ dependencies = [
  "odra-core",
  "odra-macros",
  "odra-schema",
+]
+
+[[package]]
+name = "odra-build"
+version = "2.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bce0437bc8a88f0653218a439062668684c3d3e9914dd05254d029636cc516fb"
+dependencies = [
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

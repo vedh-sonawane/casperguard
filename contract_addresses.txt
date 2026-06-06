@@ -1,0 +1,12 @@
+============================================================
+CASPERGUARD MASTER ECOSYSTEM SMART CONTRACT DEPLOYMENT DATA
+============================================================
+Live Testnet Deployment Hash: 
+42ae6d68ff2d522e17cfc7c564379999aca31979b30502f2c4fa8bdc71999b06
+
+Bundled On-Chain Modules:
+- AgentRegistry
+- AssetRegistry
+- ComplianceRegistry
+- DefiGate
+============================================================

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="charcoal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CasperGuard — RWA Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/motion.css">
+</head>
+<body>
+  <div class="app">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#" data-page="dashboard">
+          <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2L28 9v14L16 30 4 23V9L16 2z" stroke="url(#logoGrad)" stroke-width="1.5" fill="rgba(139,92,246,0.12)"/>
+            <path d="M16 8l8 4.5v9L16 26l-8-4.5v-9L16 8z" fill="url(#logoGrad)" opacity="0.9"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="4" y1="2" x2="28" y2="30">
+                <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#6366f1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="brand-text">CasperGuard</span>
+        </a>
+
+        <button class="workspace-pill" type="button" id="btn-workspace">
+          <span class="ws-dot"></span>
+          <span>Casper Testnet</span>
+          <span class="ws-role">Admin</span>
+          <svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-link active" data-page="dashboard" type="button">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>
+          Overview
+        </button>
+        <div class="nav-sub open" id="nav-sub-overview">
+          <button class="nav-sub-link active" data-page="dashboard" type="button">Dashboard</button>
+          <button class="nav-sub-link" data-page="activity" type="button">Live Feed</button>
+        </div>
+
+        <button class="nav-link" data-page="assets" type="button">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 6l7-4 7 4v8l-7 4-7-4V6z" stroke="currentColor" stroke-width="1.3"/><path d="M10 10l7-4M10 10v8M10 10L3 6" stroke="currentColor" stroke-width="1.3"/></svg>
+          RWA Assets
+        </button>
+
+        <button class="nav-link" data-page="agents" type="button">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.3"/></svg>
+          Agents
+        </button>
+
+        <button class="nav-link" data-page="contracts" type="button">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          Contracts
+        </button>
+
+        <button class="nav-link" data-page="activity" type="button">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 4h12v12H4z" stroke="currentColor" stroke-width="1.3"/><path d="M7 8h6M7 11h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          Activity
+        </button>
+      </nav>
+
+      <div class="sidebar-cta">
+        <div class="cta-glow"></div>
+        <p class="cta-title">On-Chain Attestation</p>
+        <p class="cta-desc">Run a full multi-agent compliance cycle and post results to Casper Testnet.</p>
+        <button class="cta-btn" id="btn-run-cycle" type="button">Run Cycle</button>
+      </div>
+    </aside>
+
+    <!-- MAIN SHELL -->
+    <div class="shell">
+      <header class="topbar" id="topbar">
+        <div class="topbar-surface" aria-hidden="true"></div>
+        <div class="topbar-inner">
+        <div class="breadcrumb" id="breadcrumb">
+          <span class="bc-muted">Compliance</span>
+          <span class="bc-sep">/</span>
+          <span class="bc-current" id="bc-current">Overview</span>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="search-field">
+            <svg class="search-ico" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <input id="global-search" type="search" placeholder="Search assets, hashes…" autocomplete="off">
+            <kbd class="search-kbd">⌘ /</kbd>
+          </div>
+
+          <button class="top-icon" id="btn-notifications" type="button" title="Activity">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 2a5 5 0 00-5 5v3l-1.5 2.5h13L15 10V7a5 5 0 00-5-5z" stroke="currentColor" stroke-width="1.3"/><path d="M8 16a2 2 0 004 0" stroke="currentColor" stroke-width="1.3"/></svg>
+          </button>
+          <button class="top-icon" id="btn-refresh" type="button" title="Refresh">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M17 10a7 7 0 11-2-5.3M17 4v4h-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <button class="theme-pill" id="theme-toggle" type="button">Chalk</button>
+
+          <div class="live-toggle" title="Testnet connection">
+            <span class="live-dot" id="live-dot"></span>
+            <span class="live-label">Live</span>
+          </div>
+        </div>
+        </div>
+      </header>
+
+      <div class="body-grid" id="body-grid">
+        <!-- CENTER -->
+        <div class="center-col">
+          <!-- OVERVIEW (Fobework layout) -->
+          <section id="page-dashboard" class="page active">
+            <div class="page-canvas">
+              <div class="parallax-field" aria-hidden="true">
+                <div class="parallax-orb parallax-orb--1" data-parallax-depth="0.12"></div>
+                <div class="parallax-orb parallax-orb--2" data-parallax-depth="0.07"></div>
+                <div class="parallax-orb parallax-orb--3" data-parallax-depth="0.04"></div>
+              </div>
+
+              <div class="narrative-block" data-reveal="block">
+            <div class="section-head">
+              <h2 class="section-title">My compliance stats</h2>
+              <button class="link-btn" id="btn-refresh-stats" type="button">Refresh ↻</button>
+            </div>
+
+            <div class="stat-trio">
+              <article class="stat-card">
+                <div class="stat-top">
+                  <span class="stat-num" id="stat-compliant">—</span>
+                  <span class="stat-ico stat-ico-purple">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </span>
+                </div>
+                <p class="stat-desc">Assets cleared</p>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top">
+                  <span class="stat-num" id="stat-rejected">—</span>
+                  <span class="stat-ico stat-ico-green">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                  </span>
+                </div>
+                <p class="stat-desc">Rejected by gate</p>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top">
+                  <span class="stat-num" id="stat-x402">—</span>
+                  <span class="stat-ico stat-ico-blue">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                  </span>
+                </div>
+                <p class="stat-desc">x402 API calls</p>
+              </article>
+            </div>
+              </div>
+
+            <svg class="section-wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0,32 C360,8 720,48 1080,24 C1260,12 1380,20 1440,28 L1440,48 L0,48 Z"/>
+            </svg>
+
+            <div class="narrative-block narrative-block--overlap" data-reveal="block">
+            <article class="hero-banner">
+              <div class="hero-art" aria-hidden="true">
+                <div class="hero-orb hero-orb-1" data-parallax-depth="0.16"></div>
+                <div class="hero-orb hero-orb-2" data-parallax-depth="0.09"></div>
+                <div class="hero-orb hero-orb-3" data-parallax-depth="0.05"></div>
+              </div>
+              <div class="hero-body">
+                <h3 class="hero-title">Multi-Agent Compliance Engine</h3>
+                <p class="hero-text">Risk, Compliance &amp; Treasury agents analyze RWA assets via x402 micropayments, then post attestation deploys to Casper Testnet.</p>
+                <button class="hero-btn" data-action="go-agents" type="button">View Agents →</button>
+              </div>
+            </article>
+            </div>
+
+            <svg class="section-wave section-wave--flip" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0,16 C240,40 480,0 720,20 C960,40 1200,8 1440,24 L1440,0 L0,0 Z"/>
+            </svg>
+
+            <div class="narrative-block narrative-block--angled" data-reveal="block">
+            <div class="section-head">
+              <h2 class="section-title">Active RWA assets</h2>
+              <button class="link-btn" data-action="go-assets" type="button">View all →</button>
+            </div>
+            <div class="asset-cards" id="asset-cards"></div>
+            </div>
+
+            <svg class="section-wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0,28 C320,4 640,44 960,20 C1200,4 1320,32 1440,16 L1440,48 L0,48 Z"/>
+            </svg>
+
+            <div class="narrative-block" data-reveal="block">
+            <div class="section-head">
+              <h2 class="section-title">Agent activity</h2>
+              <div class="date-chips" id="date-chips"></div>
+            </div>
+            <article class="timeline-panel">
+              <div class="timeline" id="timeline"></div>
+            </article>
+            </div>
+            </div>
+          </section>
+
+          <!-- ASSETS PAGE -->
+          <section id="page-assets" class="page">
+            <div class="section-head">
+              <h2 class="section-title">RWA Asset Registry</h2>
+              <select id="asset-filter" class="select-pill">
+                <option value="all">All types</option>
+                <option value="invoice">Invoice</option>
+                <option value="real estate">Real Estate</option>
+                <option value="bond">Bond</option>
+              </select>
+            </div>
+            <div class="search-field search-wide">
+              <svg class="search-ico" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              <input id="asset-search" type="search" placeholder="Search asset name, ID, or deploy hash…">
+            </div>
+            <div class="table-panel">
+              <table class="data-table" id="assets-table">
+                <thead>
+                  <tr>
+                    <th>Asset</th><th>Type</th><th>Value</th><th>Risk</th>
+                    <th>Sanctions</th><th>Jurisdiction</th><th>Gate</th><th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- AGENTS PAGE -->
+          <section id="page-agents" class="page">
+            <div class="section-head">
+              <h2 class="section-title">Specialized Agents</h2>
+              <span class="status-badge" id="agent-status-pill">Idle</span>
+            </div>
+            <div class="agent-grid" id="agent-cards"></div>
+            <article class="pipeline-panel">
+              <h3 class="pipeline-title">Compliance Pipeline</h3>
+              <div class="pipeline-steps">
+                <div class="pipe-step"><span>01</span><div><strong>Parallel Analysis</strong><p>x402-paid sanctions, credit &amp; jurisdiction lookups</p></div></div>
+                <div class="pipe-step"><span>02</span><div><strong>Deliberation</strong><p>Multi-agent vote &amp; consensus</p></div></div>
+                <div class="pipe-step"><span>03</span><div><strong>On-Chain Attestation</strong><p>Module deploy to Casper Testnet</p></div></div>
+                <div class="pipe-step"><span>04</span><div><strong>DeFi Gate</strong><p>Final collateral eligibility decision</p></div></div>
+              </div>
+            </article>
+          </section>
+
+          <!-- CONTRACTS PAGE -->
+          <section id="page-contracts" class="page">
+            <div class="section-head">
+              <h2 class="section-title">Smart Contracts</h2>
+              <a class="link-btn" href="https://testnet.cspr.live" target="_blank" rel="noopener noreferrer">CSPR.live ↗</a>
+            </div>
+            <div class="contract-grid" id="contract-cards"></div>
+            <div class="link-row">
+              <a class="ext-link" href="https://testnet.cspr.live/tools/faucet" target="_blank" rel="noopener noreferrer">Testnet Faucet</a>
+              <a class="ext-link" id="link-master-deploy" href="#" target="_blank" rel="noopener noreferrer">Master Deploy</a>
+              <a class="ext-link" href="https://testnet.cspr.live" target="_blank" rel="noopener noreferrer">Block Explorer</a>
+            </div>
+          </section>
+
+          <!-- ACTIVITY PAGE -->
+          <section id="page-activity" class="page">
+            <div class="section-head">
+              <h2 class="section-title">Live Agent Feed</h2>
+              <button class="link-btn" id="btn-clear-feed" type="button">Clear</button>
+            </div>
+            <div class="feed-panel" id="feed-log"></div>
+          </section>
+        </div>
+
+        <!-- RIGHT RAIL -->
+        <aside class="right-rail" id="right-rail">
+          <article class="profile-card" data-reveal data-reveal-delay="80">
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar">CG</div>
+              <span class="profile-online"></span>
+            </div>
+            <h3 class="profile-name">Compliance Ops</h3>
+            <p class="profile-handle">@casperguard · testnet</p>
+            <div class="profile-stats">
+              <div><strong id="profile-rank">—</strong><span>Compliant</span></div>
+              <div><strong id="profile-avg">—</strong><span>Avg Risk</span></div>
+              <div><strong id="profile-count">—</strong><span>Assets</span></div>
+            </div>
+          </article>
+
+          <article class="analytics-card" data-reveal data-reveal-delay="140">
+            <div class="analytics-head">
+              <h3 class="analytics-title">Portfolio health</h3>
+              <span class="analytics-month" id="analytics-month"></span>
+            </div>
+            <div class="donut-wrap">
+              <svg id="donut-chart" viewBox="0 0 120 120" aria-label="Portfolio distribution"></svg>
+              <div class="donut-center">
+                <span class="donut-pct" id="donut-pct">—</span>
+                <span class="donut-sub">Health</span>
+              </div>
+            </div>
+            <ul class="metric-bars" id="metric-bars"></ul>
+          </article>
+
+          <article class="portfolio-card" data-reveal data-reveal-delay="200">
+            <h3 class="analytics-title">Total portfolio</h3>
+            <p class="portfolio-value" id="portfolio-total">$0</p>
+            <p class="portfolio-sub" id="donut-count">0 RWA assets</p>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="/static/motion.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

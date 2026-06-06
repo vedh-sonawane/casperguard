@@ -1,0 +1,14 @@
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\deps\serde-d299603c94d3461b.d: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\build\serde-d347b67fd75ab40d\out/private.rs
+
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\deps\libserde-d299603c94d3461b.rlib: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\build\serde-d347b67fd75ab40d\out/private.rs
+
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\deps\libserde-d299603c94d3461b.rmeta: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\build\serde-d347b67fd75ab40d\out/private.rs
+
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\build\serde-d347b67fd75ab40d\out/private.rs:
+
+# env-dep:OUT_DIR=c:\\Users\\sonaw\\Projects\\CasperGuard\\contracts\\target-odra2\\release\\build\\serde-d347b67fd75ab40d\\out
