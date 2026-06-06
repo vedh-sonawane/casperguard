@@ -1,0 +1,7 @@
+httpx==0.27.0
+fastapi==0.111.0
+uvicorn==0.30.0
+python-dotenv==1.0.1
+pycspr==2.0.0
+asyncio==3.4.3
+aiohttp==3.9.5

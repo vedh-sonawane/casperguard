@@ -1,0 +1,9 @@
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\deps\derive_try_from_ref-f6228a3de37df684.d: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\attrs.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\ir.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\item.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\utils.rs
+
+c:\Users\sonaw\Projects\CasperGuard\contracts\target-odra2\release\deps\derive_try_from_ref-f6228a3de37df684.dll: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\attrs.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\ir.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\item.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\utils.rs
+
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\lib.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\attrs.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\ir.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\item.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\derive-try-from-ref-0.1.0\src\utils.rs:

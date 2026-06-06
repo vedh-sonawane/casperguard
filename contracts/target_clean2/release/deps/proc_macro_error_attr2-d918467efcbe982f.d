@@ -1,0 +1,7 @@
+C:\Users\sonaw\Projects\CasperGuard\contracts\target_clean2\release\deps\proc_macro_error_attr2-d918467efcbe982f.d: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\parse.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\settings.rs
+
+C:\Users\sonaw\Projects\CasperGuard\contracts\target_clean2\release\deps\proc_macro_error_attr2-d918467efcbe982f.dll: C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\lib.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\parse.rs C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\settings.rs
+
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\lib.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\parse.rs:
+C:\Users\sonaw\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\proc-macro-error-attr2-2.0.0\src\settings.rs:

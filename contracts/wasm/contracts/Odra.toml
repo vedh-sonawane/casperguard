@@ -1,0 +1,25 @@
+[package]
+name = "casperguard"
+
+[[contracts]]
+name = "AgentRegistry"
+fqn = "casperguard::AgentRegistry"
+
+[[contracts]]
+name = "AssetRegistry"
+fqn = "casperguard::AssetRegistry"
+
+[[contracts]]
+name = "ComplianceRegistry"
+fqn = "casperguard::ComplianceRegistry"
+
+[[contracts]]
+name = "DefiGate"
+fqn = "casperguard::DefiGate"
+
+[networks.testnet]
+# Fixed: Pointing to the real machine API endpoint instead of the website homepage
+node_address = "https://node.testnet.cspr.cloud"
+
+# Fixed: Changed all Windows backslashes (\) into safe config forward slashes (/)
+secret_key_path = "C:/Users/sonaw/Projects/CasperGuard/secret_key.pem"
