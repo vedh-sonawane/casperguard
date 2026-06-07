@@ -119,9 +119,24 @@ function navigate(page) {
 // ── API ──────────────────────────────────────────────────────────
 
 async function fetchStatus() {
-  const res = await fetch(`${API_BASE}/api/status`);
+  try {
+    const res = await fetch(`${API_BASE}/api/status`);
+    if (res.ok) {
+      const data = await res.json();
+      data.static_host = false;
+      return data;
+    }
+  } catch {
+    /* fall through to static results.json (Vercel / static hosting) */
+  }
+
+  const res = await fetch(`${API_BASE}/results.json`);
   if (!res.ok) throw new Error("Failed to load status");
-  return res.json();
+  const data = await res.json();
+  data.server_ok = true;
+  data.agent_running = false;
+  data.static_host = true;
+  return data;
 }
 
 async function runComplianceCycle() {
@@ -411,7 +426,9 @@ async function refreshData(showMsg = true) {
   try {
     state.data = await fetchStatus();
     renderAll();
-    if (showMsg) showToast("Dashboard refreshed");
+    if (showMsg) {
+      showToast(state.data.static_host ? "Loaded demo data" : "Dashboard refreshed");
+    }
   } catch {
     showToast("Start the server: python dashboard/server.py");
   }
@@ -421,6 +438,10 @@ async function handleRunCycle() {
   const btn = $("#btn-run-cycle");
   btn.disabled = true;
   try {
+    if (state.data?.static_host) {
+      showToast("Run Cycle needs the Python server — clone the GitHub repo locally");
+      return;
+    }
     await runComplianceCycle();
     showToast("Compliance cycle started (~2 min)");
     navigate("activity");
@@ -433,6 +454,7 @@ async function handleRunCycle() {
 }
 
 function startPolling() {
+  if (state.data?.static_host) return;
   clearInterval(state.pollTimer);
   state.pollTimer = setInterval(async () => {
     try {
@@ -522,7 +544,7 @@ async function init() {
   applyTheme(state.theme);
   bindEvents();
   await refreshData(false);
-  startPolling();
+  if (!state.data?.static_host) startPolling();
 }
 
 init();
