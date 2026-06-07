@@ -1,0 +1,39 @@
+# Secrets — never commit
+.env
+secret_key.pem
+*.pem
+keys/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Rust / contracts build artifacts
+contracts/target/
+contracts/target*/
+contracts/target-*/
+**/*.rs.bk
+
+# Stray local venvs
+contracts/wasm/agent/
+
+# Debug / temp scripts from deploy investigation
+contracts/wasm/tmp_*.py
+
+# Logs
+*.log
