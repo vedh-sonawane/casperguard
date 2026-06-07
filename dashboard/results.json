@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-06T21:53:42.710003+00:00",
+  "updated_at": "2026-06-07T00:02:32.745018+00:00",
   "agent_status": "idle",
-  "x402_calls": 84,
+  "x402_calls": 96,
   "contracts": {
     "master_deploy": "42ae6d68ff2d522e17cfc7c564379999aca31979b30502f2c4fa8bdc71999b06",
     "compliance_registry": "b694df7b251293bc6af60719d194dd747be0b9b5cb136c2230c5a034d7d83f4b",
@@ -14,7 +14,7 @@
       "type": "Bond",
       "issuer": "Anon Issuer",
       "value_usd": 500000,
-      "risk_score": 80,
+      "risk_score": 83,
       "credit_score": 6,
       "sanctions_clear": false,
       "jurisdiction_eligible": false,
@@ -22,7 +22,7 @@
       "votes_for": 0,
       "votes_against": 3,
       "gate_decision": "REJECTED",
-      "deploy_hash": "83c597970d0b01e05b16a4425acec3eb3c43a65a2261816014e35751ee9765a8"
+      "deploy_hash": "2e48e46705d384ec25c2710e316940a92af158ef953b33c8c692814d8c5f561d"
     },
     {
       "id": "ASSET-GOOD",
@@ -30,7 +30,7 @@
       "type": "Invoice",
       "issuer": "TechCorp Ltd",
       "value_usd": 250000,
-      "risk_score": 6,
+      "risk_score": 3,
       "credit_score": 29,
       "sanctions_clear": true,
       "jurisdiction_eligible": true,
@@ -38,7 +38,7 @@
       "votes_for": 3,
       "votes_against": 0,
       "gate_decision": "ACCEPTED",
-      "deploy_hash": "bc4add56928730556e6e06c1425035cc2256c06dc9132ca2b3e4475a3ae8ab16"
+      "deploy_hash": "9263a7b7fd00e630e00a946d7c01dc67482d40d5cded58c4bc9eca37ff033251"
     },
     {
       "id": "ASSET-MID",
@@ -46,7 +46,7 @@
       "type": "Real Estate",
       "issuer": "PropFund GmbH",
       "value_usd": 1200000,
-      "risk_score": 16,
+      "risk_score": 13,
       "credit_score": 18,
       "sanctions_clear": true,
       "jurisdiction_eligible": true,
@@ -54,10 +54,46 @@
       "votes_for": 2,
       "votes_against": 1,
       "gate_decision": "ACCEPTED",
-      "deploy_hash": "9db589bfd8fd561dfb2edfdce54f8b5001bd9f42e400b0bd85ae0b10cd8dbe26"
+      "deploy_hash": "838879c4aa026323042567f5983fbde9da61fddcdd62225ea8c83a2bd2522046"
     }
   ],
   "feed": [
+    {
+      "time": "20:02:27",
+      "message": "CASPER TX: attestation 2e48e467\u2026 posted successfully"
+    },
+    {
+      "time": "20:02:27",
+      "message": "DeFi Gate: ASSET-BAD REJECTED"
+    },
+    {
+      "time": "20:02:16",
+      "message": "Processing Unknown Bond XZ (ASSET-BAD)"
+    },
+    {
+      "time": "20:02:11",
+      "message": "CASPER TX: attestation 838879c4\u2026 posted successfully"
+    },
+    {
+      "time": "20:02:11",
+      "message": "DeFi Gate: ASSET-MID ACCEPTED"
+    },
+    {
+      "time": "20:02:02",
+      "message": "Processing Property Token Berlin-7 (ASSET-MID)"
+    },
+    {
+      "time": "20:01:57",
+      "message": "CASPER TX: attestation 9263a7b7\u2026 posted successfully"
+    },
+    {
+      "time": "20:01:57",
+      "message": "DeFi Gate: ASSET-GOOD ACCEPTED"
+    },
+    {
+      "time": "20:01:43",
+      "message": "Processing TechCorp Invoice 2026-A (ASSET-GOOD)"
+    },
     {
       "time": "17:53:37",
       "message": "CASPER TX: attestation 83c59797\u2026 posted successfully"
@@ -221,18 +257,6 @@
     {
       "time": "19:28:16",
       "message": "DeFi Gate: ASSET-GOOD ACCEPTED as collateral"
-    },
-    {
-      "time": "19:29:40",
-      "message": "ComplianceAgent: sanctions flag on ASSET-BAD"
-    },
-    {
-      "time": "19:29:55",
-      "message": "CASPER TX: attestation 133be872\u2026 posted successfully"
-    },
-    {
-      "time": "19:29:56",
-      "message": "DeFi Gate: ASSET-BAD REJECTED \u2014 no consensus"
     }
   ]
 }
